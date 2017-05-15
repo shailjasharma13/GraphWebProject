@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>check jquery</title>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var source = {
+                datatype: "json",
+                datafields: [{
+                    name: 'Graph_id',
+                    type: 'int'
+                }, {
+                    name: 'Graph_Name',
+                    type: 'string'
+                }, {
+                    name: 'Set_of_nodes',
+                    type: 'int'
+                }, {
+                    name: 'Set_of_directed_edges',
+                    type: 'int'
+                }],
+                id: 'Graph_id',
+                url: 'testjquery.jsp',
+                async: true
+            };
+            var dataAdapter = new $.jqx.dataAdapter(source);
+            $("#jqxgrid").jqxGrid({
+                width: 550,
+                autoheight: true,
+                source: dataAdapter,
+                columns: [{
+                    text: 'Graph Id',
+                    datafield: 'Graph_id',
+                    width: 100
+                }, {
+                    text: 'Graph Name',
+                    datafield: 'Graph_Name',
+                    width: 100
+                }, {
+                    text: 'Set_of_nodes',
+                    datafield: 'Set_of_nodes',
+                    width: 180
+                }, {
+                    text: 'Set_of_directed_edges',
+                    datafield: 'Set_of_directed_edges',
+                    width : 100
+                }]
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="jqxgrid"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.textStyle {
+            color:white ; 
+            margin-left: 30px ; 
+            margin-top: 30px;
+            font-size: x-large;
+           }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: xx-large;
+            font-family: monospace, 'Courier New';
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: underline;
+            text-shadow: 1px 1px darkmagenta;
+        }
+
+        .textStyle2 {
+            color: black;
+            font-size: large;
+        }
+
+        .body {
+            background: indigo;
+            
+        }
